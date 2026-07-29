@@ -10,11 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const defaultServices = [
         { id: 1, title: 'Travels & Tour Banner Design', desc: 'High-converting promotional banners and ad campaign setup for travel agencies.', stat: '✓ 45+ Campaigns', img: 'assets/travel_tour_banner_1785325297788.jpg' },
-        { id: 2, title: 'Gem & Game Top-Up Banner', desc: 'Eye-catching gaming gem & coin top-up banner graphics & promotional ads.', stat: '✓ 80+ Gem Stores', img: 'assets/gem_banner_1785325312592.jpg' },
-        { id: 3, title: 'Customize Software Development', desc: 'Tailor-made enterprise software solutions built specifically for your business.', stat: '✓ Full Stack Tech', img: 'assets/hero_brand_design_1785324740401.jpg' },
-        { id: 4, title: 'High-Performance Web Apps', desc: 'Modern Next.js, React & Node.js web applications with lightning fast UX.', stat: '✓ 100% Guaranteed', img: 'assets/hero_code_course_1785324756684.jpg' },
-        { id: 5, title: 'Personal 1-on-1 Training (Meet)', desc: 'Direct live 1-on-1 mentorship sessions on Google Meet for ads & coding.', stat: '✓ Live Google Meet', img: 'assets/service_social_media_1785324953806.jpg' },
-        { id: 6, title: 'Corporate Team Training', desc: 'Up-skill your company team with advanced ads scaling & software engineering.', stat: '✓ Enterprise Teams', img: 'assets/service_video_editing_1785324974837.jpg' }
+        { id: 2, title: 'Customize Software Development', desc: 'Tailor-made enterprise software solutions built specifically for your business.', stat: '✓ Full Stack Tech', img: 'assets/hero_brand_design_1785324740401.jpg' },
+        { id: 3, title: 'High-Performance Web Apps', desc: 'Modern Next.js, React & Node.js web applications with lightning fast UX.', stat: '✓ 100% Guaranteed', img: 'assets/hero_code_course_1785324756684.jpg' },
+        { id: 4, title: 'Personal 1-on-1 Training (Meet)', desc: 'Direct live 1-on-1 mentorship sessions on Google Meet for ads & coding.', stat: '✓ Live Google Meet', img: 'assets/service_social_media_1785324953806.jpg' },
+        { id: 5, title: 'Corporate Team Training', desc: 'Up-skill your company team with advanced ads scaling & software engineering.', stat: '✓ Enterprise Teams', img: 'assets/service_video_editing_1785324974837.jpg' }
     ];
 
     const defaultProjects = [
@@ -64,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     // Load from LocalStorage or Fallback
-    let services = JSON.parse(localStorage.getItem('be_services_v2')) || defaultServices;
+    let services = JSON.parse(localStorage.getItem('be_services_v3')) || defaultServices;
     let projects = JSON.parse(localStorage.getItem('be_projects')) || defaultProjects;
     let templates = JSON.parse(localStorage.getItem('be_templates')) || defaultTemplates;
     let courses = JSON.parse(localStorage.getItem('be_courses')) || defaultCourses;
@@ -74,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentUser = JSON.parse(localStorage.getItem('be_current_user')) || null;
 
     function saveState() {
-        localStorage.setItem('be_services_v2', JSON.stringify(services));
+        localStorage.setItem('be_services_v3', JSON.stringify(services));
         localStorage.setItem('be_projects', JSON.stringify(projects));
         localStorage.setItem('be_templates', JSON.stringify(templates));
         localStorage.setItem('be_courses', JSON.stringify(courses));
