@@ -1,0 +1,23 @@
+# Security & Secret Key Protection (100% Safe)
+.env
+.env.local
+.env.*
+*.pem
+*.key
+credentials.json
+secrets/
+config/private.*
+
+# Dependencies & Build Directories
+node_modules/
+dist/
+build/
+.cache/
+
+# System & OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+.vscode/
+.idea/
