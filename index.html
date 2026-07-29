@@ -3,116 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black Engineer // Enterprise Services, Ads Booking & Template Vault</title>
-    <meta name="description" content="Black Engineer - High-performance Ads Setup, Web & Mobile App Development, Template Marketplace, and Premium Video Courses.">
+    <title>Black Engineers // Learn. Build. Grow.</title>
+    <meta name="description" content="Black Engineers - Your premium destination for courses, products, ads setup & creative services in dark ultra-luxury theme.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="client-theme">
+<body class="dark-theme">
 
-    <!-- Global Background Mesh & Particles -->
+    <!-- Global Background Mesh & Overlay Grid -->
     <div class="bg-gradient-mesh"></div>
     <div class="bg-grid-overlay"></div>
 
-    <!-- MAIN NAVBAR -->
+    <!-- MAIN NAVBAR (BLACK ENGINEERS STYLED) -->
     <header class="main-header">
         <div class="container header-container">
             <a href="#" class="logo">
-                <div class="logo-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <div class="logo-emblem">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                 </div>
-                <span class="logo-text">BLACK<span class="accent-text"> ENGINEER</span></span>
+                <span class="logo-text">BLACK <span class="magenta-text">ENGINEERS</span></span>
             </a>
 
             <nav class="nav-links">
-                <a href="#services" class="nav-link">সার্ভিসসমূহ</a>
-                <a href="#templates" class="nav-link">টেমপ্লেট ভল্ট</a>
-                <a href="#ads-booking" class="nav-link highlight-link">এডস সেটআপ বুকিং</a>
-                <a href="#courses" class="nav-link">ভিডিও কোর্স</a>
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#courses" class="nav-link">Courses</a>
+                <a href="#templates" class="nav-link">Products</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#posts" class="nav-link">Posts</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#ads-booking" class="nav-link highlight-link">Contact</a>
             </nav>
 
             <div class="nav-actions">
+                <button class="nav-icon-btn" title="Search">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
+
                 <button id="secret-admin-btn" class="btn-cyber-trigger" title="Owner Control Terminal Access">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 0 0-10 10c0 5.523 4.477 10 10 10s10-4.477 10-10A10 10 0 0 0 12 2zm0 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm0 14a7 7 0 0 1-5.999-3.4c.03-1.992 4.001-3.085 5.999-3.085 1.991 0 5.968 1.092 6 3.085A7 7 0 0 1 12 19z"/></svg>
-                    <span>TERMINAL ACCESS</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 0 0-10 10c0 5.523 4.477 10 10 10s10-4.477 10-10A10 10 0 0 0 12 2zm0 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm0 14a7 7 0 0 1-5.999-3.4c.03-1.992 4.001-3.085 5.999-3.085 1.991 0 5.968 1.092 6 3.085A7 7 0 0 1 12 19z"/></svg>
+                    <span>TERMINAL</span>
                 </button>
 
                 <div id="auth-status-container">
-                    <button id="open-auth-btn" class="btn-primary-sm">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M13 12H3"/></svg>
-                        <span>লগইন / সাইনআপ</span>
-                    </button>
+                    <button id="open-auth-btn" class="btn-nav-login">Login</button>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION (MATCHING SCREENSHOT LAYOUT IN BLACK THEME) -->
     <section class="hero-section">
-        <div class="container hero-container">
-            <div class="hero-badge">
-                <span class="pulse-dot"></span>
-                <span>BLACK ENGINEER // ENTERPRISE PLATFORM</span>
-            </div>
-
-            <h1 class="hero-title">
-                উন্নত ডিজিটাল সার্ভিস, <span class="gradient-text">প্রফেশনাল এডস সেটআপ</span> ও প্রিমিয়াম ভল্ট
-            </h1>
-
-            <p class="hero-subtitle">
-                হাই-কনভার্টিং এডস ক্যাম্পেইন বুকিং করুন সরাসরি কোনো পেমেন্ট ছাড়া। সাথে পাচ্ছেন লাইফটাইম টেমপ্লেট ভল্ট এবং প্রিমিয়াম কোর্স এক্সেস।
-            </p>
-
-            <div class="hero-cta-group">
-                <a href="#ads-booking" class="btn-hero-primary">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                    <span>এডস সেটআপ বুক করুন</span>
-                </a>
-                <a href="#templates" class="btn-hero-secondary">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-                    <span>টেমপ্লেট ভল্ট দেখুন</span>
-                </a>
-            </div>
-
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-number">১০০%</span>
-                    <span class="stat-label">ডাইরেক্ট বুকিং সাপোর্ট</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <span class="stat-number">২৪/৭</span>
-                    <span class="stat-label">প্রফেশনাল এসিস্ট্যান্স</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <span class="stat-number">১ম পাঠ</span>
-                    <span class="stat-label">ফ্রি কোর্স প্রিভিউ</span>
+        <div class="hero-container">
+            
+            <!-- FLOATING CARD TOP LEFT -->
+            <div class="floating-card float-top-left">
+                <div class="card-thumb" style="background-image: url('assets/hero_brand_design_1785324740401.jpg');"></div>
+                <div class="card-meta">
+                    <span class="pink-badge">SERVICE</span>
+                    <h4>Brand Identity Design</h4>
                 </div>
             </div>
+
+            <!-- FLOATING CARD TOP RIGHT -->
+            <div class="floating-card float-top-right">
+                <div class="card-thumb" style="background-image: url('assets/hero_code_course_1785324756684.jpg');"></div>
+                <div class="card-meta">
+                    <span class="pink-badge">COURSE</span>
+                    <h4>App & Web Development With AI (Full Stack & No-Code)</h4>
+                </div>
+            </div>
+
+            <!-- FLOATING CARD BOTTOM LEFT -->
+            <div class="floating-card float-bottom-left">
+                <div class="card-thumb" style="background-image: url('assets/hero_brand_design_1785324740401.jpg');"></div>
+                <div class="card-meta">
+                    <span class="pink-badge">PROJECT</span>
+                    <h4>TechCorp Website Redesign</h4>
+                </div>
+            </div>
+
+            <!-- FLOATING CARD BOTTOM RIGHT -->
+            <div class="floating-card float-bottom-right">
+                <div class="card-thumb" style="background-image: url('assets/hero_code_course_1785324756684.jpg');"></div>
+                <div class="card-meta">
+                    <span class="pink-badge">PRODUCT</span>
+                    <h4>Brand Identity Starter Kit</h4>
+                </div>
+            </div>
+
+            <!-- CENTER HERO CONTENT -->
+            <div class="hero-center-content">
+                
+                <!-- TEAM AVATAR WITH NEON GLOW RING -->
+                <div class="avatar-glow-wrapper">
+                    <div class="avatar-glow-ring">
+                        <img src="assets/team_avatar_1785324771757.jpg" alt="Black Engineers Team" class="avatar-img">
+                    </div>
+                    <span class="avatar-caption">MEET THE TEAM</span>
+                </div>
+
+                <!-- AI BADGE PILL -->
+                <div class="ai-badge-pill">
+                    <span class="sparkle-icon">✦</span>
+                    <span>AI & FUTURE</span>
+                </div>
+
+                <!-- HERO MAIN TITLE -->
+                <h1 class="hero-main-heading">
+                    Learn. Build. <span class="gradient-magenta">Grow.</span>
+                </h1>
+
+                <!-- HERO SUBTITLE -->
+                <p class="hero-subtitle">
+                    Your premium destination for courses, products & creative services.
+                </p>
+
+                <!-- HERO BUTTONS -->
+                <div class="hero-actions">
+                    <a href="#courses" class="btn-pink-pill">
+                        <span>Explore Courses</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                    <a href="#projects" class="btn-outline-pill">View Projects</a>
+                </div>
+
+            </div>
+
+            <!-- BOTTOM SCROLL INDICATOR -->
+            <div class="scroll-down-arrow">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+
         </div>
     </section>
 
-    <!-- SECTION 1: SERVICES CATALOG -->
-    <section id="services" class="section-padding">
+    <!-- SECTION 1: COURSES (WITH UNLOCKED FREE PREVIEW) -->
+    <section id="courses" class="section-padding bg-alt">
         <div class="container">
             <div class="section-header text-center">
-                <span class="section-tag">SERVICES CATALOG</span>
-                <h2 class="section-title">ডিজিটাল ও আইটি সার্ভিসসমূহ</h2>
-                <p class="section-subtitle">আপনার ব্যবসার সার্বিক বৃদ্ধির জন্য তৈরি আমাদের কাস্টম সার্ভিস বেছে নিন</p>
+                <span class="section-tag-pink">PREMIUM COURSES</span>
+                <h2 class="section-title">পপুলার কোর্সসমূহ</h2>
+                <p class="section-subtitle">১ম পাঠ সম্পূর্ণ বিনামূল্যে আনলক করা রয়েছে। শিখুন এআই ও আধুনিক কোডিং।</p>
             </div>
 
-            <div class="services-grid" id="services-container">
-                <!-- Dynamically rendered via JS -->
+            <div class="courses-grid" id="courses-container">
+                <!-- Rendered dynamically -->
             </div>
         </div>
     </section>
 
-    <!-- SECTION 2: TEMPLATE MARKETPLACE VAULT -->
-    <section id="templates" class="section-padding bg-alt">
+    <!-- SECTION 2: PRODUCTS & TEMPLATES VAULT (ONE-TIME PACKAGE) -->
+    <section id="templates" class="section-padding">
         <div class="container">
             <div class="template-vault-banner">
                 <div class="vault-info">
@@ -121,12 +166,12 @@
                         ONE-TIME PURCHASE PACKAGE
                     </span>
                     <h2 class="vault-title">অল-ইন-ওয়ান টেমপ্লেট লাইফটাইম ভল্ট</h2>
-                    <p class="vault-desc">মাত্র একটি প্যাকেজে পাবেন আমাদের সব বর্তমান ও ভবিষ্যতের ওয়েব ও অ্যাপ টেমপ্লেটের আনলিমিটেড এক্সেস ও ডাউনলোড সুবিধা।</p>
+                    <p class="vault-desc">একটিমাত্র প্যাকেজে আমাদের সব বর্তমান ও ভবিষ্যতের ওয়েব ও অ্যাপ টেমপ্লেটের লাইফটাইম এক্সেস পাবেন।</p>
                 </div>
                 <div class="vault-action">
                     <div class="price-box">
                         <span class="price-currency">৳</span>
-                        <span class="price-amount" id="template-package-price">৪৯৯</span>
+                        <span class="price-amount">৪৯৯</span>
                         <span class="price-period">/ এককালীন</span>
                     </div>
                     <button class="btn-buy-package" id="buy-template-pack-btn">
@@ -137,20 +182,35 @@
             </div>
 
             <div class="templates-grid" id="templates-container">
-                <!-- Dynamically rendered via JS -->
+                <!-- Rendered dynamically -->
             </div>
         </div>
     </section>
 
-    <!-- SECTION 3: ADS SETUP SERVICE (DIRECT BOOKING - NO UPFRONT PAYMENT) -->
+    <!-- SECTION 3: SERVICES & DIRECT ADS BOOKING -->
+    <section id="services" class="section-padding bg-alt">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag-pink">CREATIVE SERVICES</span>
+                <h2 class="section-title">ডিজিটাল ও আইটি সার্ভিসসমূহ</h2>
+                <p class="section-subtitle">আপনার ব্যবসার বৃদ্ধির জন্য বিশ্বমানের সার্ভিস বুক করুন</p>
+            </div>
+
+            <div class="services-grid" id="services-container">
+                <!-- Rendered dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: ADS SETUP DIRECT BOOKING FORM (NO PAYMENT REQUIRED) -->
     <section id="ads-booking" class="section-padding">
         <div class="container">
             <div class="ads-booking-wrapper">
                 <div class="ads-info-column">
-                    <span class="section-tag">DIRECT BOOKING ENGINE</span>
+                    <span class="section-tag-pink">DIRECT BOOKING ENGINE</span>
                     <h2 class="ads-title">প্রফেশনাল এডস ক্যাম্পেইন সেটআপ সার্ভিস</h2>
                     <p class="ads-description">
-                        ফেসবুক, গুগল এবং টিকটক এডসের মাধ্যমে আপনার সেলস এবং লিড বহুগুণ বৃদ্ধি করুন। **এখানে বুকিংয়ের সময় কোনো পেমেন্ট দিতে হবে না**। বুকিং করার পর আমাদের টিম সরাসরি আপনার সাথে যোগাযোগ করে সকল প্রয়োজনীয় সেটআপ সম্পন্ন করবে।
+                        ফেসবুক, গুগল এবং টিকটক এডসের মাধ্যমে আপনার সেলস ও লিড বৃদ্ধি করুন। **এখানে বুকিং করার সময় কোনো পেমেন্ট দিতে হবে না**। বুকিং করার পর আমাদের টিম সরাসরি আপনার সাথে যোগাযোগ করে সকল প্রয়োজনীয় সেটআপ সম্পন্ন করবে।
                     </p>
 
                     <div class="ads-features-list">
@@ -160,7 +220,7 @@
                             </div>
                             <div>
                                 <h4>টার্গেটেড অডিয়েন্স রিসার্চ</h4>
-                                <p>আপনার সঠিক কাস্টমার বেছে নিয়ে পিনপয়েন্ট টার্গেটিং সেটআপ</p>
+                                <p>পিনপয়েন্ট টার্গেটিং ও কাস্টমার অডিয়েন্স রিসার্চ সেটআপ</p>
                             </div>
                         </div>
 
@@ -180,7 +240,7 @@
                             </div>
                             <div>
                                 <h4>ডিরেক্ট কনসালটেশন</h4>
-                                <p>বুকিংয়ের পর সরাসরি কল/হোয়াটসঅ্যাপে গাইডলাইন প্রদান</p>
+                                <p>বুকিংয়ের পর সরাসরি ফোন/হোয়াটসঅ্যাপে যোগাযোগ করা হবে</p>
                             </div>
                         </div>
                     </div>
@@ -238,17 +298,32 @@
         </div>
     </section>
 
-    <!-- SECTION 4: VIDEO COURSES WITH UNLOCKED PREVIEW -->
-    <section id="courses" class="section-padding bg-alt">
+    <!-- SECTION 5: PROJECTS SHOWCASE -->
+    <section id="projects" class="section-padding bg-alt">
         <div class="container">
             <div class="section-header text-center">
-                <span class="section-tag">PREMIUM LEARNING</span>
-                <h2 class="section-title">এডভান্সড ভিডিও কোর্সসমূহ</h2>
-                <p class="section-subtitle">প্রতিটি কোর্সের **১ম পাঠ সম্পূর্ণ বিনামূল্যে আনলক করা** রয়েছে। বাকি পাঠগুলো কিনতে হবে।</p>
+                <span class="section-tag-pink">PORTFOLIO</span>
+                <h2 class="section-title">আমাদের কাজ ও প্রজেক্টসমূহ</h2>
+                <p class="section-subtitle">আমাদের ক্লায়েন্টদের জন্য তৈরি করা সাকসেসফুল প্রজেক্ট</p>
             </div>
 
-            <div class="courses-grid" id="courses-container">
-                <!-- Dynamically rendered via JS -->
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img" style="background-image: url('assets/hero_brand_design_1785324740401.jpg');"></div>
+                    <div class="project-body">
+                        <span class="pink-badge">E-COMMERCE</span>
+                        <h3>TechCorp Website Redesign</h3>
+                        <p>হাই-পারফরম্যান্স ই-কমার্স স্টোর রিলঞ্চ ও স্কেলিং।</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img" style="background-image: url('assets/hero_code_course_1785324756684.jpg');"></div>
+                    <div class="project-body">
+                        <span class="pink-badge">MOBILE APP</span>
+                        <h3>FinTech AI Mobile Banking App</h3>
+                        <p>Flutter দিয়ে তৈরি ক্রস-প্ল্যাটফর্ম এআই ওয়ালেট অ্যাপ।</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -258,26 +333,31 @@
         <div class="container footer-container">
             <div class="footer-brand">
                 <a href="#" class="logo">
-                    <span class="logo-text">BLACK<span class="accent-text"> ENGINEER</span></span>
+                    <span class="logo-text">BLACK <span class="magenta-text">ENGINEERS</span></span>
                 </a>
-                <p>Enterprise Digital Services & Cyber Controlled Platform.</p>
+                <p>Learn. Build. Grow. Premium destination for digital creation.</p>
             </div>
             <div class="footer-copy">
-                &copy; 2026 BLACK ENGINEER PLATFORM. ALL RIGHTS RESERVED. SECURED VIA ENCRYPTED AUTH.
+                &copy; 2026 BLACK ENGINEERS. ALL RIGHTS RESERVED.
             </div>
         </div>
     </footer>
 
+    <!-- FLOATING WHATSAPP BUTTON (MATCHING REFERENCE) -->
+    <a href="https://wa.me/8801700000000" target="_blank" class="floating-whatsapp-btn" title="Contact on WhatsApp">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+    </a>
+
     <!-- MODAL: BOOKING CONFIRMATION MODAL -->
     <div id="booking-modal" class="modal-backdrop hidden">
         <div class="modal-card text-center">
-            <button class="modal-close-btn" class="close-modal">&times;</button>
+            <button class="modal-close-btn close-modal">&times;</button>
             <div class="modal-icon-success">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
             </div>
             <h3 class="modal-title">আপনার বুকিং সফল হয়েছে!</h3>
             <p class="modal-message" id="booking-modal-msg">
-                আপনার এডস সেটআপ বুকিং রিকোয়েস্টটি আমাদের সিস্টেমে জমা হয়েছে। **আমাদের প্রতিনিধি খুব শীঘ্রই আপনার সাথে সরাসরি ফোনে বা হোয়াটসঅ্যাপে যোগাযোগ করবেন।**
+                আপনার এডস সেটআপ বুকিং রিকোয়েস্টটি সিস্টেমে জমা হয়েছে। **আমাদের প্রতিনিধি খুব শীঘ্রই আপনার সাথে সরাসরি ফোনে বা হোয়াটসঅ্যাপে যোগাযোগ করবেন।**
             </p>
             <div class="booking-receipt-box" id="booking-receipt"></div>
             <button class="btn-primary-block close-modal">ঠিক আছে</button>
@@ -287,12 +367,11 @@
     <!-- MODAL: COURSE PLAYER MODAL -->
     <div id="course-modal" class="modal-backdrop hidden">
         <div class="modal-card modal-lg">
-            <button class="modal-close-btn" class="close-modal">&times;</button>
+            <button class="modal-close-btn close-modal">&times;</button>
             <div class="course-player-layout">
                 <div class="video-container-box">
                     <div class="video-wrapper">
                         <div id="video-placeholder" class="video-display-area">
-                            <!-- HTML5 Video / Dynamic Player -->
                             <video id="course-video-element" controls style="width:100%; height:100%; object-fit:cover;">
                                 <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
                                 Your browser does not support HTML5 video.
@@ -318,7 +397,7 @@
     <!-- MODAL: AUTHENTICATION MODAL -->
     <div id="auth-modal" class="modal-backdrop hidden">
         <div class="modal-card">
-            <button class="modal-close-btn" class="close-modal">&times;</button>
+            <button class="modal-close-btn close-modal">&times;</button>
             <div class="auth-tabs">
                 <button class="auth-tab active" data-tab="login">লগইন</button>
                 <button class="auth-tab" data-tab="register">রেজিস্টার</button>
@@ -359,11 +438,10 @@
         <div class="crt-scanlines"></div>
         <div class="terminal-window">
             
-            <!-- Terminal Header HUD -->
             <div class="terminal-hud-header">
                 <div class="terminal-brand">
                     <div class="matrix-status-light"></div>
-                    <span class="term-title">BLACK ENGINEER // OWNER COMMAND TERMINAL v4.2</span>
+                    <span class="term-title">BLACK ENGINEERS // OWNER COMMAND TERMINAL v4.2</span>
                 </div>
 
                 <div class="terminal-stats">
@@ -384,7 +462,6 @@
                 <button id="close-terminal-btn" class="btn-term-close" title="Exit Terminal">&times; EXIT</button>
             </div>
 
-            <!-- Terminal Tabs Navigation -->
             <div class="terminal-nav-tabs">
                 <button class="term-tab active" data-termtab="bookings">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
@@ -404,10 +481,7 @@
                 </button>
             </div>
 
-            <!-- Terminal Content Body -->
             <div class="terminal-body">
-                
-                <!-- TAB 1: BOOKINGS FEED & REAL-TIME ALERTS -->
                 <div id="termtab-bookings" class="term-content-section active">
                     <div class="term-section-head">
                         <h3>[TELEMETRY] LIVE ADS SETUPS & SERVICE BOOKINGS</h3>
@@ -427,14 +501,11 @@
                                     <th>ACTION</th>
                                 </tr>
                             </thead>
-                            <tbody id="term-bookings-tbody">
-                                <!-- Rendered dynamically -->
-                            </tbody>
+                            <tbody id="term-bookings-tbody"></tbody>
                         </table>
                     </div>
                 </div>
 
-                <!-- TAB 2: TEMPLATE VAULT MANAGER -->
                 <div id="termtab-templates" class="term-content-section hidden">
                     <div class="term-section-head">
                         <h3>[DATABASE] TEMPLATE VAULT OVERRIDE</h3>
@@ -463,32 +534,24 @@
 
                         <div class="term-list-box">
                             <h4>EXISTING VAULT TEMPLATES</h4>
-                            <div class="term-scroll-list" id="term-templates-list">
-                                <!-- Rendered dynamically -->
-                            </div>
+                            <div class="term-scroll-list" id="term-templates-list"></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- TAB 3: COURSE VIDEO LOCK CONTROL -->
                 <div id="termtab-courses" class="term-content-section hidden">
                     <div class="term-section-head">
                         <h3>[ENCRYPTION] COURSE VIDEO LOCK CONTROLLER</h3>
                         <p>প্রতিটি কোর্সের পাঠ্যক্রমের জন্য ১ম ভিডিও ফ্রি প্রিভিউ এবং বাকিগুলো লক/আনলক ম্যানুয়ালি টগল করুন</p>
                     </div>
-
-                    <div class="term-scroll-list" id="term-courses-list">
-                        <!-- Rendered dynamically -->
-                    </div>
+                    <div class="term-scroll-list" id="term-courses-list"></div>
                 </div>
 
-                <!-- TAB 4: USER ACCESS MATRIX -->
                 <div id="termtab-users" class="term-content-section hidden">
                     <div class="term-section-head">
                         <h3>[ACCESS CONTROL] REGISTERED USER MATRIX</h3>
                         <p>ইউজারদের অল-এক্সেস প্যাকেজ দেওয়া বা প্রিভিলেজ লেভেল পরিবর্তনের টার্মিনাল</p>
                     </div>
-
                     <div class="term-table-wrapper">
                         <table class="term-table">
                             <thead>
@@ -501,19 +564,15 @@
                                     <th>ACTIONS</th>
                                 </tr>
                             </thead>
-                            <tbody id="term-users-tbody">
-                                <!-- Rendered dynamically -->
-                            </tbody>
+                            <tbody id="term-users-tbody"></tbody>
                         </table>
                     </div>
                 </div>
-
             </div>
 
-            <!-- Terminal Footer Status Ticker -->
             <div class="terminal-footer">
                 <div class="ticker-text">
-                    [SYS_LOG]: BLACK ENGINEER SECURE ADAPTER READY. LISTENING ON PORT 443... ZERO EMOJI COMPLIANCE OK.
+                    [SYS_LOG]: BLACK ENGINEERS SECURE ADAPTER READY. LISTENING ON PORT 443... ZERO EMOJI COMPLIANCE OK.
                 </div>
             </div>
 
