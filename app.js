@@ -224,6 +224,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Global helper for Section Scroll
+    window.scrollToSec = function(secId) {
+        const sec = document.getElementById(secId);
+        if (sec) {
+            sec.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     // Global helper for Service Booking scroll
     window.scrollToAdsBooking = function(serviceTitle) {
         const adsSec = document.getElementById('ads-booking');
