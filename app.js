@@ -50,26 +50,26 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const defaultUsers = [
-        { id: 'USR-101', name: 'Admin Owner', email: 'owner@nexus.dev', role: 'ADMIN', hasAllAccess: true },
+        { id: 'USR-101', name: 'Black Engineer Admin', email: 'admin@blackengineer.dev', role: 'ADMIN', hasAllAccess: true },
         { id: 'USR-102', name: 'Demo Customer', email: 'customer@gmail.com', role: 'CUSTOMER', hasAllAccess: false }
     ];
 
     // Load from LocalStorage or Fallback
-    let services = JSON.parse(localStorage.getItem('nexus_services')) || defaultServices;
-    let templates = JSON.parse(localStorage.getItem('nexus_templates')) || defaultTemplates;
-    let courses = JSON.parse(localStorage.getItem('nexus_courses')) || defaultCourses;
-    let bookings = JSON.parse(localStorage.getItem('nexus_bookings')) || defaultBookings;
-    let users = JSON.parse(localStorage.getItem('nexus_users')) || defaultUsers;
+    let services = JSON.parse(localStorage.getItem('be_services')) || defaultServices;
+    let templates = JSON.parse(localStorage.getItem('be_templates')) || defaultTemplates;
+    let courses = JSON.parse(localStorage.getItem('be_courses')) || defaultCourses;
+    let bookings = JSON.parse(localStorage.getItem('be_bookings')) || defaultBookings;
+    let users = JSON.parse(localStorage.getItem('be_users')) || defaultUsers;
 
-    let currentUser = JSON.parse(localStorage.getItem('nexus_current_user')) || null;
+    let currentUser = JSON.parse(localStorage.getItem('be_current_user')) || null;
 
     function saveState() {
-        localStorage.setItem('nexus_services', JSON.stringify(services));
-        localStorage.setItem('nexus_templates', JSON.stringify(templates));
-        localStorage.setItem('nexus_courses', JSON.stringify(courses));
-        localStorage.setItem('nexus_bookings', JSON.stringify(bookings));
-        localStorage.setItem('nexus_users', JSON.stringify(users));
-        localStorage.setItem('nexus_current_user', JSON.stringify(currentUser));
+        localStorage.setItem('be_services', JSON.stringify(services));
+        localStorage.setItem('be_templates', JSON.stringify(templates));
+        localStorage.setItem('be_courses', JSON.stringify(courses));
+        localStorage.setItem('be_bookings', JSON.stringify(bookings));
+        localStorage.setItem('be_users', JSON.stringify(users));
+        localStorage.setItem('be_current_user', JSON.stringify(currentUser));
     }
 
     // ----------------------------------------------------------------------

@@ -1,4 +1,4 @@
-# Enterprise Service Platform & Cyber-Hacker Control Terminal
+# Black Engineer - Enterprise Service Platform & Cyber Control Terminal
 
 A high-performance digital services, ads setup booking, template marketplace, and video course platform with an integrated Cyber-Hacker Owner Terminal.
 
@@ -19,10 +19,8 @@ A high-performance digital services, ads setup booking, template marketplace, an
 - **100% Safe**: Zero hardcoded credentials. All secret keys are protected via `.gitignore`.
 - **Private Repository Sync**:
   ```bash
-  git init
   git add .
-  git commit -m "Initial commit - Enterprise Service Platform & Cyber-Hacker Terminal"
-  git branch -M main
-  git remote add origin <YOUR_PRIVATE_GITHUB_REPO_URL>
+  git commit -m "Update branding to Black Engineer"
+  git remote add origin <YOUR_NEW_PRIVATE_GITHUB_REPO_URL>
   git push -u origin main
   ```
