@@ -1,5 +1,5 @@
 /* ==========================================================================
-   NEXUS PLATFORM & CYBER HACKER TERMINAL - MASTER APPLICATION ENGINE
+   BLACK ENGINEERS - MASTER APPLICATION ENGINE (MARQUEES & OWNER TERMINAL)
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,17 +9,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // ----------------------------------------------------------------------
 
     const defaultServices = [
-        { id: 1, title: 'কাস্টম ওয়েব অ্যাপ্লিকেশন', desc: 'Next.js, React ও Node.js দিয়ে তৈরি আধুনিক ও ফাস্ট ওয়েব প্ল্যাটফর্ম।', price: '৳১৫,০০০+', category: 'Web Development' },
-        { id: 2, title: 'মোবাইল অ্যাপ ডেভেলপমেন্ট', desc: 'Flutter দিয়ে iOS ও Android এর জন্য সিঙ্গেল কোডবেস নেটিভ পারফরম্যান্স অ্যাপ।', price: '৳২৫,০০০+', category: 'Mobile App' },
-        { id: 3, title: 'UI/UX ও ব্র্যান্ড ডিজাইন', desc: 'গ্লাসমর্ফিজম, অ্যানিমেশন এবং কনভার্সন ফ্রেন্ডলি মোবাইল-ফার্স্ট ডিজাইন।', price: '৳১০,০০০+', category: 'Design System' },
-        { id: 4, title: 'ই-কমার্স ও পেমেন্ট সেটআপ', desc: 'বিকাশ, নগদ, কার্ড পেমেন্ট ও ইনভেন্টরি ম্যানেজমেন্ট সহ ই-কমার্স শপ।', price: '৳২০,০০০+', category: 'E-Commerce' }
+        { id: 1, title: 'Social Media Marketing', desc: 'Grow your brand on Facebook, IG & TikTok with targeted ads.', stat: '✓ 37 clients served', img: 'assets/service_social_media_1785324953806.jpg' },
+        { id: 2, title: 'Video Production & Editing', desc: 'Cinematic video production for high-converting ads and Reels.', stat: '✓ High Conversion', img: 'assets/service_video_editing_1785324974837.jpg' },
+        { id: 3, title: 'Brand Identity Design', desc: 'Complete branding package — logo, typography & guidelines.', stat: '✓ 50+ Brands', img: 'assets/hero_brand_design_1785324740401.jpg' },
+        { id: 4, title: 'Professional Website Design', desc: 'We build stunning, fast & responsive custom web platforms.', stat: '✓ 100% Guaranteed', img: 'assets/hero_code_course_1785324756684.jpg' }
+    ];
+
+    const defaultProjects = [
+        { id: 301, title: 'TechCorp Website Redesign', subtitle: 'TechCorp Bangladesh', category: 'PROJECT', img: 'assets/hero_brand_design_1785324740401.jpg' },
+        { id: 302, title: 'FoodBD Brand Identity', subtitle: 'FoodBD Limited', category: 'PROJECT', img: 'assets/hero_code_course_1785324756684.jpg' },
+        { id: 303, title: 'GreenEnergy Ad Campaign', subtitle: 'GreenEnergy Bangladesh', category: 'PROJECT', img: 'assets/service_social_media_1785324953806.jpg' },
+        { id: 304, title: 'StyleHouse E-commerce', subtitle: 'StyleHouse BD', category: 'PROJECT', img: 'assets/service_video_editing_1785324974837.jpg' }
     ];
 
     const defaultTemplates = [
-        { id: 101, title: 'Next.js SaaS Boilerplate v2.4', category: 'Full-stack Starter', downloadUrl: 'https://github.com/nexus/saas-starter', previewUrl: '#' },
-        { id: 102, title: 'Flutter Multi-vendor E-commerce UI', category: 'Mobile UI Kit', downloadUrl: 'https://github.com/nexus/flutter-ecommerce', previewUrl: '#' },
-        { id: 103, title: 'Cyberpunk Portfolio & Agency Theme', category: 'Vanilla HTML/CSS', downloadUrl: 'https://github.com/nexus/cyber-portfolio', previewUrl: '#' },
-        { id: 104, title: 'React Dashboard & Analytics UI', category: 'Admin Panel', downloadUrl: 'https://github.com/nexus/react-admin-ui', previewUrl: '#' }
+        { id: 101, title: 'Next.js SaaS Boilerplate v2.4', category: 'Full-stack Starter', downloadUrl: 'https://github.com/engomarsany/Black-Enginner', previewUrl: '#' },
+        { id: 102, title: 'Flutter Multi-vendor E-commerce UI', category: 'Mobile UI Kit', downloadUrl: 'https://github.com/engomarsany/Black-Enginner', previewUrl: '#' },
+        { id: 103, title: 'Cyberpunk Portfolio & Agency Theme', category: 'Vanilla HTML/CSS', downloadUrl: 'https://github.com/engomarsany/Black-Enginner', previewUrl: '#' },
+        { id: 104, title: 'React Dashboard & Analytics UI', category: 'Admin Panel', downloadUrl: 'https://github.com/engomarsany/Black-Enginner', previewUrl: '#' }
     ];
 
     const defaultCourses = [
@@ -50,12 +57,13 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const defaultUsers = [
-        { id: 'USR-101', name: 'Black Engineer Admin', email: 'admin@blackengineer.dev', role: 'ADMIN', hasAllAccess: true },
+        { id: 'USR-101', name: 'Black Engineer Owner', email: 'admin@blackengineer.dev', role: 'ADMIN', hasAllAccess: true },
         { id: 'USR-102', name: 'Demo Customer', email: 'customer@gmail.com', role: 'CUSTOMER', hasAllAccess: false }
     ];
 
     // Load from LocalStorage or Fallback
     let services = JSON.parse(localStorage.getItem('be_services')) || defaultServices;
+    let projects = JSON.parse(localStorage.getItem('be_projects')) || defaultProjects;
     let templates = JSON.parse(localStorage.getItem('be_templates')) || defaultTemplates;
     let courses = JSON.parse(localStorage.getItem('be_courses')) || defaultCourses;
     let bookings = JSON.parse(localStorage.getItem('be_bookings')) || defaultBookings;
@@ -65,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function saveState() {
         localStorage.setItem('be_services', JSON.stringify(services));
+        localStorage.setItem('be_projects', JSON.stringify(projects));
         localStorage.setItem('be_templates', JSON.stringify(templates));
         localStorage.setItem('be_courses', JSON.stringify(courses));
         localStorage.setItem('be_bookings', JSON.stringify(bookings));
@@ -72,9 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('be_current_user', JSON.stringify(currentUser));
     }
 
-    // ----------------------------------------------------------------------
-    // 2. AUDIO SYNTHESIZER FOR HACKER TERMINAL ALERTS
-    // ----------------------------------------------------------------------
+    // Audio Synth for Terminal Alert
     function playTerminalAlertSound() {
         try {
             const ctx = new (window.AudioContext || window.webkitAudioContext)();
@@ -93,36 +100,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
             osc.start();
             osc.stop(ctx.currentTime + 0.15);
-        } catch (e) {
-            console.log('Audio Context Not Triggered');
-        }
+        } catch (e) {}
     }
 
     // ----------------------------------------------------------------------
-    // 3. RENDERERS
+    // 2. RENDER MARQUEE CAROUSELS (INFINITE SMOOTH LOOP)
     // ----------------------------------------------------------------------
 
-    // Render Services Grid
-    function renderServices() {
-        const container = document.getElementById('services-container');
-        if (!container) return;
+    function renderServicesMarquee() {
+        const track = document.getElementById('services-marquee-track');
+        if (!track) return;
 
-        container.innerHTML = services.map(s => `
-            <div class="service-card">
-                <div class="service-icon-wrapper">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                </div>
-                <h3>${s.title}</h3>
-                <p>${s.desc}</p>
-                <div class="service-card-footer">
-                    <span class="service-price">${s.price}</span>
-                    <button class="btn-service-action" onclick="scrollToAdsBooking('${s.title}')">বুকিং দিন</button>
+        // Create card HTML snippet
+        const cardsHtml = services.map(s => `
+            <div class="marquee-card" onclick="scrollToAdsBooking('${s.title}')">
+                <div class="marquee-card-img" style="background-image: url('${s.img}');"></div>
+                <div class="marquee-card-body">
+                    <span class="pink-badge">SERVICE</span>
+                    <h4>${s.title}</h4>
+                    <p>${s.desc}</p>
+                    <span class="marquee-card-meta">${s.stat}</span>
                 </div>
             </div>
         `).join('');
+
+        // Duplicate 3x to ensure flawless infinite marquee loop with zero gaps
+        track.innerHTML = cardsHtml + cardsHtml + cardsHtml;
     }
 
-    // Render Templates Vault
+    function renderProjectsMarquee() {
+        const track = document.getElementById('projects-marquee-track');
+        if (!track) return;
+
+        const cardsHtml = projects.map(p => `
+            <div class="marquee-card">
+                <div class="marquee-card-img" style="background-image: url('${p.img}');"></div>
+                <div class="marquee-card-body">
+                    <span class="pink-badge">${p.category}</span>
+                    <h4>${p.title}</h4>
+                    <p>${p.subtitle}</p>
+                </div>
+            </div>
+        `).join('');
+
+        // Duplicate 3x for infinite loop
+        track.innerHTML = cardsHtml + cardsHtml + cardsHtml;
+    }
+
     function renderTemplates() {
         const container = document.getElementById('templates-container');
         if (!container) return;
@@ -133,41 +157,33 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="template-card">
                 <div class="template-preview-area">
                     <span class="template-tag">${t.category}</span>
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,0,127,0.3)" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
                 </div>
                 <div class="template-card-body">
                     <h3>${t.title}</h3>
                     <p>সম্পূর্ণ সোর্স কোড ও ডকুমেন্টেশন সহ প্রডিউসড টেমপ্লেট।</p>
                     <button class="btn-download-tpl ${hasPass ? 'unlocked' : 'locked'}" onclick="handleTemplateDownload('${t.downloadUrl}', ${hasPass})">
-                        ${hasPass ? `
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                            <span>ডাউনলোড সোর্স কোড</span>
-                        ` : `
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                            <span>লকড (প্যাকেজ কিনুন)</span>
-                        `}
+                        ${hasPass ? 'ডাউনলোড সোর্স কোড' : 'লকড (প্যাকেজ কিনুন)'}
                     </button>
                 </div>
             </div>
         `).join('');
     }
 
-    // Render Courses Grid
     function renderCourses() {
         const container = document.getElementById('courses-container');
         if (!container) return;
 
         container.innerHTML = courses.map(c => `
             <div class="course-card">
-                <div class="course-thumb">
-                    <span class="course-badge-free">১ম পাঠ ফ্রি প্রিভিউ</span>
-                    <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="rgba(99,102,241,0.5)" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <div class="course-thumb" style="height:170px; background:linear-gradient(135deg, #1e1b4b, #0f172a); display:flex; align-items:center; justify-content:center;">
+                    <span class="pink-badge" style="position:absolute; top:1rem; right:1rem;">১ম পাঠ ফ্রি প্রিভিউ</span>
+                    <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="rgba(255,0,127,0.6)" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                 </div>
                 <div class="course-body">
                     <h3>${c.title}</h3>
                     <p>${c.desc}</p>
                     <button class="btn-open-course" onclick="openCoursePlayer(${c.id})">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                         <span>কোর্স ও ফ্রি প্রিভিউ দেখুন</span>
                     </button>
                 </div>
@@ -176,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ----------------------------------------------------------------------
-    // 4. ADS SETUP DIRECT BOOKING SUBMISSION (NO UPFRONT PAYMENT)
+    // 3. ADS SETUP DIRECT BOOKING FORM (NO UPFRONT PAYMENT)
     // ----------------------------------------------------------------------
     const adsForm = document.getElementById('ads-booking-form');
     if (adsForm) {
@@ -203,11 +219,9 @@ document.addEventListener('DOMContentLoaded', () => {
             bookings.unshift(newBooking);
             saveState();
 
-            // Trigger Cyber Terminal Sound & Notification Update
             playTerminalAlertSound();
             renderTerminalBookings();
 
-            // Open Confirmation Modal for Customer
             const modal = document.getElementById('booking-modal');
             const receiptBox = document.getElementById('booking-receipt');
             if (modal && receiptBox) {
@@ -224,27 +238,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Global helper for Section Scroll
+    // Helper functions
     window.scrollToSec = function(secId) {
         const sec = document.getElementById(secId);
-        if (sec) {
-            sec.scrollIntoView({ behavior: 'smooth' });
-        }
+        if (sec) sec.scrollIntoView({ behavior: 'smooth' });
     };
 
-    // Global helper for Service Booking scroll
     window.scrollToAdsBooking = function(serviceTitle) {
         const adsSec = document.getElementById('ads-booking');
         if (adsSec) {
             adsSec.scrollIntoView({ behavior: 'smooth' });
-            const platformSelect = document.getElementById('ads-platform');
-            if (platformSelect) {
-                platformSelect.value = 'Complete All-in-One Sales Funnel';
-            }
         }
     };
 
-    // Global helper for Template Download
     window.handleTemplateDownload = function(url, isUnlocked) {
         if (isUnlocked) {
             alert('ডাউনলোড শুরু হচ্ছে: ' + url);
@@ -253,7 +259,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Buy Template Package Button
     const buyPackBtn = document.getElementById('buy-template-pack-btn');
     if (buyPackBtn) {
         buyPackBtn.addEventListener('click', () => {
@@ -270,9 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ----------------------------------------------------------------------
-    // 5. COURSE PLAYER ENGINE (FREE PREVIEW VIDEO 1 VS LOCKED VIDEOS)
-    // ----------------------------------------------------------------------
+    // Course Video Player Engine
     let activeCourseId = null;
 
     window.openCoursePlayer = function(courseId) {
@@ -281,14 +284,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!course) return;
 
         const modal = document.getElementById('course-modal');
-        const playlist = document.getElementById('playlist-container');
-
-        if (modal && playlist) {
+        if (modal) {
             renderPlaylist(course);
-            // Play Video 1 by default
-            if (course.lessons.length > 0) {
-                playLesson(course.lessons[0]);
-            }
+            if (course.lessons.length > 0) playLesson(course.lessons[0]);
             modal.classList.remove('hidden');
         }
     };
@@ -342,7 +340,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ----------------------------------------------------------------------
-    // 6. CYBER-HACKER OWNER TERMINAL ENGINE
+    // 4. CYBER-HACKER OWNER TERMINAL ENGINE
     // ----------------------------------------------------------------------
 
     const terminalOverlay = document.getElementById('cyber-terminal');
@@ -366,7 +364,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Terminal Tabs Switching
     const termTabs = document.querySelectorAll('.term-tab');
     termTabs.forEach(tab => {
         tab.addEventListener('click', () => {
@@ -380,13 +377,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Render Terminal Bookings Feed
     function renderTerminalBookings() {
         const tbody = document.getElementById('term-bookings-tbody');
         const countBadge = document.getElementById('term-booking-count');
-
         if (countBadge) countBadge.textContent = `${bookings.length} REQ`;
-
         if (!tbody) return;
 
         tbody.innerHTML = bookings.map(b => `
@@ -419,7 +413,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Render Terminal Templates
     function renderTerminalTemplates() {
         const list = document.getElementById('term-templates-list');
         if (!list) return;
@@ -443,15 +436,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const category = document.getElementById('term-tpl-category').value;
             const downloadUrl = document.getElementById('term-tpl-url').value;
 
-            const newTpl = {
-                id: Date.now(),
-                title,
-                category,
-                downloadUrl,
-                previewUrl: '#'
-            };
-
-            templates.unshift(newTpl);
+            templates.unshift({ id: Date.now(), title, category, downloadUrl, previewUrl: '#' });
             saveState();
             renderTemplates();
             renderTerminalTemplates();
@@ -466,7 +451,6 @@ document.addEventListener('DOMContentLoaded', () => {
         renderTerminalTemplates();
     };
 
-    // Render Terminal Courses (Toggle Lock/Unlock)
     function renderTerminalCourses() {
         const list = document.getElementById('term-courses-list');
         if (!list) return;
@@ -501,7 +485,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Render Terminal Users Matrix
     function renderTerminalUsers() {
         const tbody = document.getElementById('term-users-tbody');
         if (!tbody) return;
@@ -533,48 +516,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Terminal Clock Ticker
     setInterval(() => {
         const clockElem = document.getElementById('term-live-clock');
-        if (clockElem) {
-            clockElem.textContent = new Date().toLocaleTimeString();
-        }
+        if (clockElem) clockElem.textContent = new Date().toLocaleTimeString();
     }, 1000);
 
-    // ----------------------------------------------------------------------
-    // 7. AUTHENTICATION & MODAL HANDLERS
-    // ----------------------------------------------------------------------
-
+    // Auth Handlers
     const authModal = document.getElementById('auth-modal');
     const openAuthBtn = document.getElementById('open-auth-btn');
     const closeBtns = document.querySelectorAll('.close-modal');
 
-    function openAuthModal() {
-        if (authModal) authModal.classList.remove('hidden');
-    }
-
+    function openAuthModal() { if (authModal) authModal.classList.remove('hidden'); }
     if (openAuthBtn) openAuthBtn.addEventListener('click', openAuthModal);
 
     closeBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             document.querySelectorAll('.modal-backdrop').forEach(m => m.classList.add('hidden'));
-        });
-    });
-
-    const authTabs = document.querySelectorAll('.auth-tab');
-    authTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            authTabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-
-            const tabType = tab.dataset.tab;
-            if (tabType === 'login') {
-                document.getElementById('login-form').classList.remove('hidden');
-                document.getElementById('register-form').classList.add('hidden');
-            } else {
-                document.getElementById('login-form').classList.add('hidden');
-                document.getElementById('register-form').classList.remove('hidden');
-            }
         });
     });
 
@@ -584,7 +541,6 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const email = document.getElementById('login-email').value;
 
-            // Simple Auth simulation
             currentUser = users.find(u => u.email === email) || {
                 id: 'USR-' + Math.floor(100 + Math.random() * 900),
                 name: email.split('@')[0],
@@ -593,10 +549,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 hasAllAccess: false
             };
 
-            if (!users.some(u => u.email === currentUser.email)) {
-                users.push(currentUser);
-            }
-
+            if (!users.some(u => u.email === currentUser.email)) users.push(currentUser);
             saveState();
             updateAuthUI();
             if (authModal) authModal.classList.add('hidden');
@@ -610,9 +563,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (currentUser) {
             container.innerHTML = `
-                <div style="display:flex; align-items:center; gap:0.75rem;">
-                    <span style="font-size:0.85rem; color:#00e5ff; font-weight:600;">${currentUser.name} (${currentUser.role})</span>
-                    <button id="logout-btn" class="btn-service-action" style="padding:0.4rem 0.8rem;">লগআউট</button>
+                <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <span style="font-size:0.85rem; color:#ff007f; font-weight:700;">${currentUser.name}</span>
+                    <button id="logout-btn" class="btn-cyber-trigger" style="padding:0.3rem 0.7rem;">LOGOUT</button>
                 </div>
             `;
             document.getElementById('logout-btn').addEventListener('click', () => {
@@ -622,20 +575,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 renderTemplates();
             });
         } else {
-            container.innerHTML = `
-                <button id="open-auth-btn" class="btn-primary-sm">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M13 12H3"/></svg>
-                    <span>লগইন / সাইনআপ</span>
-                </button>
-            `;
+            container.innerHTML = `<button id="open-auth-btn" class="btn-nav-login">Login</button>`;
             document.getElementById('open-auth-btn').addEventListener('click', openAuthModal);
         }
     }
 
     // ----------------------------------------------------------------------
-    // 8. INITIALIZE APP
+    // INITIALIZE APP
     // ----------------------------------------------------------------------
-    renderServices();
+    renderServicesMarquee();
+    renderProjectsMarquee();
     renderTemplates();
     renderCourses();
     updateAuthUI();

@@ -612,6 +612,129 @@ h1, h2, h3, h4 {
     transform: translateX(4px);
 }
 
+/* ==========================================================================
+   INFINITE AUTO-SCROLLING MARQUEE CAROUSELS (MATCHING 3RD REFERENCE SCREENSHOT)
+   ========================================================================== */
+
+.marquee-carousel-section {
+    padding: 4rem 0 5rem;
+    overflow: hidden;
+}
+
+.marquee-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.marquee-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.marquee-view-all {
+    color: var(--magenta);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.marquee-view-all:hover { color: #ffffff; }
+
+.marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 0.5rem 0;
+    mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+}
+
+.marquee-track {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+    animation: marquee-scroll 28s linear infinite;
+}
+
+.marquee-wrapper:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+.marquee-track.marquee-reverse {
+    animation: marquee-scroll-reverse 32s linear infinite;
+}
+
+@keyframes marquee-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-scroll-reverse {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+.marquee-card {
+    width: 280px;
+    flex-shrink: 0;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(14px);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 0.85rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.marquee-card:hover {
+    border-color: var(--pink-badge-border);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(255, 0, 127, 0.25);
+}
+
+.marquee-card-img {
+    width: 100%;
+    height: 135px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 0.75rem;
+}
+
+.marquee-card-body h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: #ffffff;
+}
+
+.marquee-card-body p {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin-bottom: 0.4rem;
+}
+
+.marquee-card-meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.72rem;
+    color: #10b981;
+    font-weight: 700;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    padding: 0.15rem 0.5rem;
+    border-radius: 6px;
+}
+
 /* TEMPLATE VAULT & COURSES SECTIONS */
 .template-vault-banner {
     background: linear-gradient(135deg, rgba(20, 28, 48, 0.9), rgba(10, 15, 29, 0.9));
