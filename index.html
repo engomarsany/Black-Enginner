@@ -470,7 +470,7 @@
                 <div class="footer-col">
                     <h4 class="footer-heading">Contact & Owner Portal</h4>
                     <p class="footer-contact-item">
-                        <strong>WhatsApp / Call:</strong> +880 1700-000000
+                        <strong>WhatsApp / Call:</strong> +8801715750232
                     </p>
                     <p class="footer-contact-item">
                         <strong>Email Support:</strong> support@blackengineers.dev
@@ -500,10 +500,81 @@
         </div>
     </footer>
 
-    <!-- FLOATING WHATSAPP BUTTON (MATCHING REFERENCE) -->
-    <a href="https://wa.me/8801700000000" target="_blank" class="floating-whatsapp-btn" title="Contact on WhatsApp">
+    <!-- FLOATING WHATSAPP BUTTON WITH UPDATED NUMBER -->
+    <a href="https://wa.me/8801715750232" target="_blank" class="floating-whatsapp-btn" title="Contact on WhatsApp: +8801715750232">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
     </a>
+
+    <!-- MODAL: WEBSITE DEVELOPMENT CATEGORY PACKAGES -->
+    <div id="web-dev-modal" class="modal-backdrop hidden">
+        <div class="modal-card modal-lg">
+            <button class="modal-close-btn close-modal">&times;</button>
+            <div class="modal-header text-center" style="margin-bottom: 2rem;">
+                <span class="pink-badge">WEBSITE DEVELOPMENT PACKAGES</span>
+                <h2 style="font-size: 2rem; margin-top: 0.5rem;">ওয়েবসাইট ডেভেলপমেন্ট প্ল্যানসমূহ</h2>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">আপনার প্রয়োজন অনুযায়ী সঠিক ক্যাটাগরি ও প্ল্যান বেছে নিন</p>
+            </div>
+
+            <div class="web-dev-plans-grid">
+                
+                <!-- PLAN 1: E-COMMERCE -->
+                <div class="plan-card">
+                    <span class="plan-tag">CATEGORY 01</span>
+                    <h3>E-Commerce Website</h3>
+                    <p class="plan-subtitle">সম্পূর্ণ ই-কমার্স শপ ও পেমেন্ট সেটআপ</p>
+                    <div class="plan-price-box">
+                        <span class="currency">৳</span>
+                        <span class="amount">১০,০০০</span>
+                        <span class="note">(10K)</span>
+                    </div>
+                    <div class="plan-feature-note">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--magenta)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span>Without Domain & Hosting Plan</span>
+                    </div>
+                    <button class="btn-select-plan" onclick="selectWebPlan('E-Commerce Website (৳10,000 - Without Domain/Hosting)')">
+                        <span>বুকিং দিন</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+                </div>
+
+                <!-- PLAN 2: TOP-UP WEBSITE -->
+                <div class="plan-card featured-plan">
+                    <span class="plan-tag featured">CATEGORY 02</span>
+                    <h3>Top-Up Website</h3>
+                    <p class="plan-subtitle">গেমিং ও ওয়ালেট টপ-আপ অটোমেশন সাইট</p>
+                    <div class="plan-price-box">
+                        <span class="currency">৳</span>
+                        <span class="amount">১৫,০০০</span>
+                        <span class="note">(15K)</span>
+                    </div>
+                    <div class="plan-feature-note">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--magenta)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span>Without Domain & Hosting Plan</span>
+                    </div>
+                    <button class="btn-select-plan highlighted" onclick="selectWebPlan('Top-Up Website (৳15,000 - Without Domain/Hosting)')">
+                        <span>বুকিং দিন</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+                </div>
+
+                <!-- PLAN 3: CUSTOM WEBSITE -->
+                <div class="plan-card">
+                    <span class="plan-tag">CATEGORY 03</span>
+                    <h3>Custom Website</h3>
+                    <p class="plan-subtitle">সম্পূর্ণ কাস্টম ফিচার ও স্পেশাল রিকোয়ারমেন্ট</p>
+                    <div class="plan-contact-box">
+                        <span class="contact-label">সরাসরি যোগাযোগের জন্য:</span>
+                        <a href="tel:+8801715750232" class="contact-number-link">+8801715750232</a>
+                    </div>
+                    <a href="https://wa.me/8801715750232?text=Hi,%20I%20need%20a%20Custom%20Website%20development%20quote." target="_blank" class="btn-select-plan whatsapp-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                        <span>WhatsApp এ মেসেজ দিন</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <!-- MODAL: BOOKING CONFIRMATION MODAL -->
     <div id="booking-modal" class="modal-backdrop hidden">

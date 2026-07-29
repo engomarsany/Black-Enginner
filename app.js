@@ -239,6 +239,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Global helper for Web Dev Modal & Plan Selection
+    window.openWebDevModal = function() {
+        const modal = document.getElementById('web-dev-modal');
+        if (modal) modal.classList.remove('hidden');
+    };
+
+    window.selectWebPlan = function(planTitle) {
+        // Close modal
+        const modal = document.getElementById('web-dev-modal');
+        if (modal) modal.classList.add('hidden');
+
+        // Scroll to booking form and set platform
+        const adsSec = document.getElementById('ads-booking');
+        const platformSelect = document.getElementById('ads-platform');
+        if (adsSec) adsSec.scrollIntoView({ behavior: 'smooth' });
+
+        if (platformSelect) {
+            // Check if option exists, otherwise add dynamically
+            let exists = Array.from(platformSelect.options).some(opt => opt.value === planTitle);
+            if (!exists) {
+                const newOpt = document.createElement('option');
+                newOpt.value = planTitle;
+                newOpt.textContent = planTitle;
+                platformSelect.appendChild(newOpt);
+            }
+            platformSelect.value = planTitle;
+        }
+    };
+
     // Helper functions
     window.scrollToSec = function(secId) {
         const sec = document.getElementById(secId);
@@ -246,6 +275,11 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.scrollToAdsBooking = function(serviceTitle) {
+        if (serviceTitle && (serviceTitle.includes('Web') || serviceTitle.includes('Software'))) {
+            openWebDevModal();
+            return;
+        }
+
         const adsSec = document.getElementById('ads-booking');
         if (adsSec) {
             adsSec.scrollIntoView({ behavior: 'smooth' });

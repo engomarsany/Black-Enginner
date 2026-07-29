@@ -977,6 +977,162 @@ h1, h2, h3, h4 {
     color: rgba(255, 255, 255, 0.2);
 }
 
+/* ==========================================================================
+   WEBSITE DEVELOPMENT PLANS MODAL STYLES
+   ========================================================================== */
+
+.web-dev-plans-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+    .web-dev-plans-grid { grid-template-columns: 1fr; }
+}
+
+.plan-card {
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 1.75rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.plan-card.featured-plan {
+    border-color: var(--magenta);
+    background: rgba(255, 0, 127, 0.05);
+    box-shadow: 0 0 25px rgba(255, 0, 127, 0.2);
+}
+
+.plan-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--magenta);
+}
+
+.plan-tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 800;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.plan-tag.featured {
+    color: var(--magenta);
+}
+
+.plan-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.3rem;
+}
+
+.plan-subtitle {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+}
+
+.plan-price-box {
+    display: flex;
+    align-items: baseline;
+    gap: 0.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.plan-price-box .currency {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--magenta);
+}
+
+.plan-price-box .amount {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+.plan-price-box .note {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-left: 0.3rem;
+}
+
+.plan-feature-note {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(255, 0, 127, 0.1);
+    border: 1px solid rgba(255, 0, 127, 0.25);
+    color: #ffffff;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.4rem 0.75rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.btn-select-plan {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    color: #ffffff;
+    padding: 0.75rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-select-plan:hover, .btn-select-plan.highlighted {
+    background: var(--magenta-gradient);
+    border-color: transparent;
+    box-shadow: 0 4px 15px rgba(255, 0, 127, 0.4);
+}
+
+.btn-select-plan.whatsapp-btn {
+    background: rgba(37, 211, 102, 0.15);
+    border-color: rgba(37, 211, 102, 0.4);
+    color: #25d366;
+}
+
+.btn-select-plan.whatsapp-btn:hover {
+    background: #25d366;
+    color: #000000;
+}
+
+.plan-contact-box {
+    margin-bottom: 1.5rem;
+}
+
+.contact-label {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+}
+
+.contact-number-link {
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--cyan);
+    text-decoration: none;
+}
+
 /* MODALS */
 .modal-backdrop {
     position: fixed;
