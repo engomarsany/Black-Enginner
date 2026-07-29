@@ -556,6 +556,100 @@ document.addEventListener('DOMContentLoaded', () => {
         if (clockElem) clockElem.textContent = new Date().toLocaleTimeString();
     }, 1000);
 
+    // ----------------------------------------------------------------------
+    // 5. CUSTOMER PORTAL & DASHBOARD ENGINE
+    // ----------------------------------------------------------------------
+
+    const custTabs = document.querySelectorAll('.cust-tab');
+    custTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            custTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            const targetTab = tab.dataset.custtab;
+            document.querySelectorAll('.cust-content-section').forEach(sec => sec.classList.add('hidden'));
+            const activeSec = document.getElementById(`custtab-${targetTab}`);
+            if (activeSec) activeSec.classList.remove('hidden');
+        });
+    });
+
+    window.openCustomerPortal = function() {
+        if (!currentUser) {
+            openAuthModal();
+            return;
+        }
+        const modal = document.getElementById('customer-portal-modal');
+        if (modal) {
+            renderCustomerPortalData();
+            modal.classList.remove('hidden');
+        }
+    };
+
+    function renderCustomerPortalData() {
+        if (!currentUser) return;
+
+        // Profile Details
+        const nameElem = document.getElementById('cust-profile-name');
+        const emailElem = document.getElementById('cust-profile-email');
+        const avatarElem = document.getElementById('cust-avatar-text');
+        const badgeElem = document.getElementById('cust-pass-badge');
+
+        if (nameElem) nameElem.textContent = currentUser.name;
+        if (emailElem) emailElem.textContent = currentUser.email;
+        if (avatarElem) avatarElem.textContent = currentUser.name.charAt(0).toUpperCase();
+        if (badgeElem) {
+            badgeElem.innerHTML = currentUser.hasAllAccess 
+                ? `<span class="pink-badge" style="background:rgba(16,185,129,0.15); border-color:rgba(16,185,129,0.4); color:#10b981;">ALL-ACCESS PASS HOLDER</span>`
+                : `<span class="pink-badge">REGULAR CUSTOMER</span>`;
+        }
+
+        // 1. My Bookings Table
+        const bookingsTbody = document.getElementById('cust-bookings-tbody');
+        if (bookingsTbody) {
+            const myBookings = bookings.filter(b => b.name === currentUser.name || currentUser.role === 'ADMIN' || true);
+            bookingsTbody.innerHTML = myBookings.length > 0 ? myBookings.map(b => `
+                <tr>
+                    <td><strong>${b.id}</strong></td>
+                    <td style="color:#ffffff; font-weight:600;">${b.platform}</td>
+                    <td>${b.budget}</td>
+                    <td style="color:var(--text-muted);">${b.timestamp}</td>
+                    <td>
+                        <span class="term-status-pill ${b.status.toLowerCase()}">${b.status}</span>
+                    </td>
+                </tr>
+            `).join('') : `<tr><td colspan="5" style="text-align:center; color:var(--text-muted);">কোনো সার্ভিস বুকিং পাওয়া যায়নি।</td></tr>`;
+        }
+
+        // 2. My Templates
+        const tplContainer = document.getElementById('cust-templates-container');
+        if (tplContainer) {
+            const hasPass = currentUser.hasAllAccess || currentUser.role === 'ADMIN';
+            tplContainer.innerHTML = templates.map(t => `
+                <div class="template-card" style="padding:1rem;">
+                    <h4>${t.title}</h4>
+                    <p style="font-size:0.78rem; color:var(--text-muted); margin:0.3rem 0 0.8rem;">Category: ${t.category}</p>
+                    <button class="btn-download-tpl ${hasPass ? 'unlocked' : 'locked'}" onclick="handleTemplateDownload('${t.downloadUrl}', ${hasPass})" style="font-size:0.75rem; padding:0.4rem;">
+                        ${hasPass ? 'ডাউনলোড সোর্স কোড' : 'লকড (প্যাকেজ কিনুন)'}
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        // 3. My Courses
+        const courseContainer = document.getElementById('cust-courses-container');
+        if (courseContainer) {
+            courseContainer.innerHTML = courses.map(c => `
+                <div class="course-card" style="padding:1rem;">
+                    <h4>${c.title}</h4>
+                    <p style="font-size:0.78rem; color:var(--text-muted); margin:0.3rem 0 0.8rem;">${c.lessons.length}টি মডিউল ভিডিও</p>
+                    <button class="btn-open-course" onclick="openCoursePlayer(${c.id})" style="font-size:0.78rem; padding:0.5rem;">
+                        কোর্স ভিডিও দেখুন
+                    </button>
+                </div>
+            `).join('');
+        }
+    }
+
     // Auth Handlers
     const authModal = document.getElementById('auth-modal');
     const openAuthBtn = document.getElementById('open-auth-btn');

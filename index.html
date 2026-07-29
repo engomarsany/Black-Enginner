@@ -505,6 +505,85 @@
         <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
     </a>
 
+    <!-- MODAL: CUSTOMER PORTAL & DASHBOARD -->
+    <div id="customer-portal-modal" class="modal-backdrop hidden">
+        <div class="modal-card modal-lg" style="max-width: 980px;">
+            <button class="modal-close-btn close-modal">&times;</button>
+            
+            <div class="customer-portal-header">
+                <div class="user-profile-summary">
+                    <div class="user-avatar-circle" id="cust-avatar-text">U</div>
+                    <div>
+                        <h3 id="cust-profile-name">Customer Name</h3>
+                        <p id="cust-profile-email" style="color: var(--text-muted); font-size: 0.85rem;">customer@example.com</p>
+                    </div>
+                </div>
+                <div class="user-pass-status" id="cust-pass-badge">
+                    <span class="pink-badge">REGULAR CUSTOMER</span>
+                </div>
+            </div>
+
+            <!-- Customer Portal Navigation Tabs -->
+            <div class="customer-portal-tabs">
+                <button class="cust-tab active" data-custtab="my-bookings">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    আমার বুকিংসমূহ
+                </button>
+                <button class="cust-tab" data-custtab="my-templates">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/></svg>
+                    আমার টেমপ্লেট ভল্ট
+                </button>
+                <button class="cust-tab" data-custtab="my-courses">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+                    আমার ভিডিও কোর্স
+                </button>
+            </div>
+
+            <!-- Customer Portal Body Content -->
+            <div class="customer-portal-body">
+                
+                <!-- TAB 1: MY BOOKINGS -->
+                <div id="custtab-my-bookings" class="cust-content-section active">
+                    <h4 style="margin-bottom: 1rem; color: var(--magenta);">আপনার সাম্প্রতিক এডস ও সার্ভিস বুকিং তালিকা</h4>
+                    <div class="cust-table-wrapper">
+                        <table class="cust-table">
+                            <thead>
+                                <tr>
+                                    <th>BOOKING ID</th>
+                                    <th>SERVICE / PLAN</th>
+                                    <th>BUDGET</th>
+                                    <th>DATE & TIME</th>
+                                    <th>CONTACT STATUS</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cust-bookings-tbody">
+                                <!-- Rendered dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- TAB 2: MY TEMPLATES -->
+                <div id="custtab-my-templates" class="cust-content-section hidden">
+                    <h4 style="margin-bottom: 1rem; color: var(--magenta);">আপনার অল-এক্সেস টেমপ্লেট ডাউনলোডার</h4>
+                    <div id="cust-templates-container" class="cust-grid">
+                        <!-- Rendered dynamically -->
+                    </div>
+                </div>
+
+                <!-- TAB 3: MY COURSES -->
+                <div id="custtab-my-courses" class="cust-content-section hidden">
+                    <h4 style="margin-bottom: 1rem; color: var(--magenta);">আপনার ভিডিও কোর্স ও পাঠ তালিকা</h4>
+                    <div id="cust-courses-container" class="cust-grid">
+                        <!-- Rendered dynamically -->
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
     <!-- MODAL: WEBSITE DEVELOPMENT CATEGORY PACKAGES -->
     <div id="web-dev-modal" class="modal-backdrop hidden">
         <div class="modal-card modal-lg" style="max-width: 1080px;">

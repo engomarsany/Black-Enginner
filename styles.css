@@ -978,6 +978,106 @@ h1, h2, h3, h4 {
 }
 
 /* ==========================================================================
+   CUSTOMER PORTAL & DASHBOARD STYLES
+   ========================================================================== */
+
+.customer-portal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 1.5rem;
+}
+
+.user-profile-summary {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-avatar-circle {
+    width: 52px;
+    height: 52px;
+    background: var(--magenta-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(255, 0, 127, 0.4);
+}
+
+.customer-portal-tabs {
+    display: flex;
+    gap: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 1.5rem;
+}
+
+.cust-tab {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.cust-tab:hover {
+    color: #ffffff;
+}
+
+.cust-tab.active {
+    color: var(--magenta);
+    border-bottom-color: var(--magenta);
+}
+
+.cust-content-section.hidden {
+    display: none;
+}
+
+.cust-table-wrapper {
+    overflow-x: auto;
+}
+
+.cust-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    text-align: left;
+}
+
+.cust-table th {
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-muted);
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    font-weight: 700;
+}
+
+.cust-table td {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+}
+
+/* ==========================================================================
    WEBSITE DEVELOPMENT PLANS MODAL STYLES
    ========================================================================== */
 
